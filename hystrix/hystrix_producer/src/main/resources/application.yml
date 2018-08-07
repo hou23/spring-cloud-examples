@@ -1,12 +1,12 @@
 spring:
   application:
-    name: consul_consumer1
+    name: hystrix_producer
   cloud:
     consul:
       host: localhost
       port: 8500
       discovery:
-        register: false
+        service-name: hystrix-producer
 
 server:
-  port: 8501
+  port: 8504

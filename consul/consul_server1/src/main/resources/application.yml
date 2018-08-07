@@ -9,4 +9,4 @@ spring:
         service-name: service-producer
 
 server:
-  port: 8501
+  port: 8502
