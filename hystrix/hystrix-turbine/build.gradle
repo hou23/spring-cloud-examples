@@ -31,9 +31,11 @@ dependencyManagement {
 
 dependencies {
     compile('org.springframework.boot:spring-boot-starter')
-    compile('org.springframework.boot:spring-boot-starter-web')
     compile('org.springframework.boot:spring-boot-starter-actuator')
     compile('org.springframework.cloud:spring-cloud-starter-consul-all')
-    compile('org.springframework.cloud:spring-cloud-starter-netflix-hystrix')
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-hystrix-dashboard')
+    compile('org.springframework.cloud:spring-cloud-starter-netflix-turbine') {
+        exclude group: 'org.springframework.cloud', module: 'spring-cloud-starter-netflix-eureka-client'
+    }
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }

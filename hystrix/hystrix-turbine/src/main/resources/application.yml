@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: hystrix-turbine
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: hystrix-turbine
+
+server:
+  port: 8505
+
+turbine:
+  app-config: hystrix-consumer, hystrix-consumer2
+  cluster-name-expression: new String("default")
+  aggregator:
+    cluster-config: default
