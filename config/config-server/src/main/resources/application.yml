@@ -1,0 +1,11 @@
+server:
+  port: 8507
+spring:
+  application:
+    name: cofnig-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/hou23/spring-cloud-examples
+          search-paths: config-repo
