@@ -2,6 +2,6 @@ spring:
   cloud:
     config:
       name: config
-      profile: dev
+      profile: pro
       uri: http://localhost:8507/
       label: master

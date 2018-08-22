@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
-	@Value("${dev.hello}")
+	@Value("${config.hello}")
 	private String hello;
 
 	@RequestMapping("/hello")
