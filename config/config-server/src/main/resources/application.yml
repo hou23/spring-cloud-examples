@@ -11,3 +11,9 @@ spring:
           uri: https://github.com/hou23/spring-cloud-examples
           # git仓库目录
           search-paths: config-repo
+    # 使用consul改造spring cloud config, 使config server高可用
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        service-name: config-server

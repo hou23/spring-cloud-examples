@@ -3,5 +3,16 @@ spring:
     config:
       name: config
       profile: pro
-      uri: http://localhost:8507/
+      # 使用服务发现, 无需指定uri
+#      uri: http://localhost:8507/
       label: master
+      # 使用consul改造spring cloud config, 实现高可用.
+      discovery:
+        enabled: true
+        service-id: config-server
+      fail-fast: true
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        register: false
