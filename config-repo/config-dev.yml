@@ -1,2 +1,2 @@
-dev:
+config:
   hello: hello, I'm config-dev.yml

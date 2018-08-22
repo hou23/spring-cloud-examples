@@ -2,10 +2,12 @@ server:
   port: 8507
 spring:
   application:
-    name: cofnig-server
+    name: config-server
   cloud:
     config:
       server:
         git:
+          # 存储config的git仓库地址
           uri: https://github.com/hou23/spring-cloud-examples
+          # git仓库目录
           search-paths: config-repo
