@@ -16,3 +16,8 @@ spring:
       port: 8500
       discovery:
         register: false
+    # 开启消息跟踪
+    bus:
+      enabled: true
+    stream:
+      default-binder: rabbit
